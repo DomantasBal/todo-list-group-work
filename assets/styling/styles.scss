@@ -5,7 +5,13 @@
 }
 
 body {
-  background: linear-gradient(to right, #f17442, #ff8c00);
+  background: linear-gradient(
+    108.5deg,
+    rgba(231, 69, 54, 0.82) 11.2%,
+    rgba(255, 181, 17, 0.82) 68%
+  );
+  background-repeat: no-repeat;
+  height: 100vh;
   display: flex;
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
@@ -20,6 +26,7 @@ body {
   border-radius: 6px;
   display: flex;
   flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #app-container {
