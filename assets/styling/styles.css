@@ -5,13 +5,38 @@
 }
 
 body {
-  background: linear-gradient(108.5deg, rgba(231, 69, 54, 0.82) 11.2%, rgba(255, 181, 17, 0.82) 68%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(108.5deg, rgba(231, 69, 54, 0.82) 11.2%, rgba(255, 181, 17, 0.82) 68%);
+}
+body header {
+  background: white;
+  width: 100%;
+}
+body header nav {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+body header nav .nav__list {
+  margin: 0px 60px;
+  display: flex;
+  gap: 40px;
+  font-size: 1.2rem;
+}
+body header nav .nav__list .nav__list-item {
+  list-style-type: none;
+  color: black;
+}
+body header nav .nav__list .nav__list-item .nav__list-link {
+  text-decoration: none;
+  color: black;
 }
 body hr {
   border-color: lightgrey;
@@ -21,8 +46,7 @@ body hr {
   margin-left: -30px;
   width: 400px;
 }
-
-#app-container {
+body #app-container {
   width: 400px;
   background: white;
   margin: 150px 0px;
@@ -31,24 +55,22 @@ body hr {
   display: flex;
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  align-self: stretch;
 }
-
-#app-container .app__form-container {
+body #app-container .app__form-container {
   display: flex;
 }
-#app-container .app__form-container #new-task-form {
+body #app-container .app__form-container #new-task-form {
   width: 100%;
   display: flex;
   align-items: center;
 }
-#app-container .app__form-container #new-task-form .new-task-form__icon {
+body #app-container .app__form-container #new-task-form .new-task-form__icon {
   font-size: 1rem;
   position: absolute;
   margin-left: 15px;
   color: lightgray;
 }
-#app-container .app__form-container #new-task-form #new-task__input {
+body #app-container .app__form-container #new-task-form #new-task__input {
   width: 100%;
   padding: 15px;
   padding-left: 40px;
@@ -58,32 +80,32 @@ body hr {
   border-radius: 6px;
   transition: border 0.25s, box-shadow 0.25s;
 }
-#app-container .app__form-container #new-task-form #new-task__input:focus {
+body #app-container .app__form-container #new-task-form #new-task__input:focus {
   border: 0.8px solid #f78800;
   outline: 0;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
-#app-container .tabs-container {
+body #app-container .tabs-container {
   margin: 20px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#app-container .tabs-container .tabs {
+body #app-container .tabs-container .tabs {
   list-style-type: none;
   display: flex;
   gap: 15px;
 }
-#app-container .tabs-container .tabs .tab__item .tab__item-link {
+body #app-container .tabs-container .tabs .tab__item .tab__item-link {
   text-decoration: none;
   color: black;
   transition: color 0.5s, font-size 0.25s;
 }
-#app-container .tabs-container .tabs .tab__item .tab__item-link:hover {
+body #app-container .tabs-container .tabs .tab__item .tab__item-link:hover {
   color: #ff8c00;
   font-size: 1.01rem;
 }
-#app-container .tabs-container #clearAll-btn {
+body #app-container .tabs-container #clearAll-btn {
   padding: 8px 15px;
   border: none;
   border-radius: 4px;
@@ -92,45 +114,44 @@ body hr {
   transition: transform 0.25s ease-in-out;
   cursor: pointer;
 }
-#app-container .tabs-container #clearAll-btn:hover {
+body #app-container .tabs-container #clearAll-btn:hover {
   background: linear-gradient(to right, #e2612e, #f78800);
   transform: scale(1.02);
 }
-#app-container .task-list-container {
+body #app-container .task-list-container {
   display: flex;
   margin-top: 20px;
 }
-#app-container .task-list-container .task-list {
+body #app-container .task-list-container .task-list {
   width: 100%;
 }
-#app-container .task-list-container .task-list .task-list__item {
+body #app-container .task-list-container .task-list .task-list__item {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
   margin: 15px 0px;
 }
-#app-container .task-list-container .task-list .task-list__item .task-list__left .done-task-form {
+body #app-container .task-list-container .task-list .task-list__item .task-list__left .done-task-form {
   display: flex;
 }
-#app-container .task-list-container .task-list .task-list__item .task-list__left .done-task-form .checkbox {
+body #app-container .task-list-container .task-list .task-list__item .task-list__left .done-task-form .checkbox {
   accent-color: #f78800;
 }
-#app-container .task-list-container .task-list .task-list__item .task-list__left .done-task-form .task-list__text-output {
+body #app-container .task-list-container .task-list .task-list__item .task-list__left .done-task-form .task-list__text-output {
   margin-left: 15px;
   cursor: pointer;
   transition: color 0.25s;
 }
-#app-container .task-list-container .task-list .task-list__item .task-list__left .done-task-form .task-list__text-output:hover {
+body #app-container .task-list-container .task-list .task-list__item .task-list__left .done-task-form .task-list__text-output:hover {
   color: #f78800;
 }
-#app-container .task-list-container .task-list .task-list__item .task-list__right .dot-menu {
+body #app-container .task-list-container .task-list .task-list__item .task-list__right .dot-menu {
   transition: color 0.25s;
   cursor: pointer;
 }
-#app-container .task-list-container .task-list .task-list__item .task-list__right .dot-menu:hover {
+body #app-container .task-list-container .task-list .task-list__item .task-list__right .dot-menu:hover {
   color: #f78800;
 }
-
-.crossOut {
+body .crossOut {
   text-decoration: line-through;
 }/*# sourceMappingURL=styles.css.map */

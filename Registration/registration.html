@@ -1,26 +1,74 @@
-<link rel="stylesheet" href="registration.scss">
-<script src="registration.js"></script>
-<div class="login">
-    <form name='form-login'>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <!-- STYLING -->
+    <link rel="stylesheet" href="./registration.css" />
+    <link rel="stylesheet" href="../assets/styling/styles.css" />
+
+    <!-- Javascript -->
+    <script defer src="./registration.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__list-item">
+            <a href="../index.html" class="nav__list-link">Home</a>
+          </li>
+          <li class="nav__list-item">
+            <span class="nav__register-icon">
+              <i class="fa-solid fa-user-plus"></i>
+            </span>
+            <a href="../Registration/registration.html" class="nav__list-link"
+              >Registration</a
+            >
+          </li>
+          <li class="nav__list-item">
+            <span class="nav__login-icon">
+              <i class="fa-solid fa-right-to-bracket"></i>
+            </span>
+            <a href="../Registration/registration.html" class="nav__list-link"
+              >Login</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="login">
+      <form name="form-login">
         <h1>REGISTER</h1>
 
         <label for="name">Email</label>
-        <input type="email" id="name" placeholder="Username" required>
+        <input type="email" id="name" placeholder="Username" required />
 
         <label for="pw">Password</label>
-        <input type="password"
-               id= "pw"
-               placeholder="Password" required>
+        <input type="password" id="pw" placeholder="Password" required />
 
         <ul class="helper-text">
-            <li class="length">Must be at least 8 characters long.</li>
-            <li class="lowercase">Must contain a lowercase letter.</li>
-            <li class="uppercase">Must contain an uppercase letter.</li>
-            <li class="special">Must contain a number or special character.</li>
+          <li class="length">Must be at least 8 characters long.</li>
+          <li class="lowercase">Must contain a lowercase letter.</li>
+          <li class="uppercase">Must contain an uppercase letter.</li>
+          <li class="special">Must contain a number or special character.</li>
         </ul>
-        <input id="rgstr_btn" type="submit" value="Register" onclick="store()">
-        
-    </form>
-</div>
-
+        <input
+          id="rgstr_btn"
+          type="submit"
+          value="Register"
+          onclick="store()"
+        />
+      </form>
+    </div>
+  </body>
+</html>
