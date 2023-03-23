@@ -109,19 +109,18 @@ body hr {
   justify-content: space-between;
   margin: 15px 0px;
 }
-#app-container .task-list-container .task-list .task-list__item .task-list__left {
+#app-container .task-list-container .task-list .task-list__item .task-list__left .done-task-form {
   display: flex;
 }
-#app-container .task-list-container .task-list .task-list__item .task-list__left .checkbox {
+#app-container .task-list-container .task-list .task-list__item .task-list__left .done-task-form .checkbox {
   accent-color: #f78800;
 }
-#app-container .task-list-container .task-list .task-list__item .task-list__left .task-list__text-output {
-  text-decoration: line-through;
+#app-container .task-list-container .task-list .task-list__item .task-list__left .done-task-form .task-list__text-output {
   margin-left: 15px;
   cursor: pointer;
   transition: color 0.25s;
 }
-#app-container .task-list-container .task-list .task-list__item .task-list__left .task-list__text-output:hover {
+#app-container .task-list-container .task-list .task-list__item .task-list__left .done-task-form .task-list__text-output:hover {
   color: #f78800;
 }
 #app-container .task-list-container .task-list .task-list__item .task-list__right .dot-menu {
@@ -130,4 +129,8 @@ body hr {
 }
 #app-container .task-list-container .task-list .task-list__item .task-list__right .dot-menu:hover {
   color: #f78800;
+}
+
+.crossOut {
+  text-decoration: line-through;
 }/*# sourceMappingURL=styles.css.map */
