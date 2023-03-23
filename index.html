@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <!-- STYLES -->
     <link rel="stylesheet" href="./assets/styling/styles.css" />
-
     <!-- FONT AWESOME -->
     <link
       rel="stylesheet"
@@ -21,7 +19,7 @@
       <div class="app__form-container">
         <!-- NEW TASK FORM -->
         <form action="" id="new-task-form">
-          <!-- <i class="new-task-form__icon fa-solid fa-pen-to-square"></i> -->
+          <i class="new-task-form__icon fa-solid fa-pen-to-square"></i>
           <!-- NEW TASK INPUT -->
           <input
             type="text"
@@ -35,18 +33,25 @@
       <!-- NEW TASK TABS -->
       <div class="tabs-container">
         <ul class="tabs">
-          <li class="tab__item">All</li>
-          <li class="tab__item">Pending</li>
-          <li class="tab__item">Completed</li>
+          <li class="tab__item">
+            <a href="" class="tab__item-link">All</a>
+          </li>
+          <li class="tab__item">
+            <a href="" class="tab__item-link">Pending</a>
+          </li>
+          <li class="tab__item">
+            <a href="" class="tab__item-link">Completed</a>
+          </li>
         </ul>
 
         <!-- CLEAR ALL BUTTON -->
-
         <button id="clearAll-btn">Clear All</button>
       </div>
 
       <div class="task-list-container">
+        <!-- TASK LIST -->
         <ul class="task-list">
+          <!-- SINGLE LIST ITEM -->
           <li class="task-list__item">
             <div class="task-list__left">
               <form action="" id="done-task-form">
@@ -54,10 +59,11 @@
               </form>
               <p class="task-list__text-output">Eat Pizza</p>
             </div>
-            <div>
-              <i class="fa-solid fa-ellipsis"></i>
+            <div class="task-list__right">
+              <i class="dot-menu fa-solid fa-ellipsis"></i>
             </div>
           </li>
+          <!-- SINGLE LIST ITEM END -->
         </ul>
       </div>
     </div>

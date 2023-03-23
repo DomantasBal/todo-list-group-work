@@ -15,10 +15,10 @@ body {
 
 #app-container {
   width: 400px;
-  height: 200px;
+  height: 300px;
   background: white;
-  margin: 100px 0px;
-  padding: 20px;
+  margin: 150px 0px;
+  padding: 30px;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
@@ -33,12 +33,25 @@ body {
   display: flex;
   align-items: center;
 }
+#app-container .app__form-container #new-task-form .new-task-form__icon {
+  font-size: 1rem;
+  position: absolute;
+  margin-left: 15px;
+  color: lightgray;
+}
 #app-container .app__form-container #new-task-form #new-task__input {
   width: 100%;
-  padding: 10px;
+  padding: 15px;
+  padding-left: 40px;
+  font-size: 1rem;
+  color: black;
   border: 0.8px solid lightgrey;
-  padding: 12px;
   border-radius: 6px;
+  transition: border 0.25s;
+}
+#app-container .app__form-container #new-task-form #new-task__input:focus {
+  border: 0.8px solid #f78800;
+  outline: 0;
 }
 #app-container .tabs-container {
   margin: 20px 0px;
@@ -49,14 +62,29 @@ body {
 #app-container .tabs-container .tabs {
   list-style-type: none;
   display: flex;
-  gap: 30px;
+  gap: 15px;
+}
+#app-container .tabs-container .tabs .tab__item .tab__item-link {
+  text-decoration: none;
+  color: black;
+  transition: color 0.5s, font-size 0.25s;
+}
+#app-container .tabs-container .tabs .tab__item .tab__item-link:hover {
+  color: #ff8c00;
+  font-size: 1.01rem;
 }
 #app-container .tabs-container #clearAll-btn {
   padding: 8px 15px;
   border: none;
-  border-radius: 2px;
+  border-radius: 4px;
   color: white;
   background: linear-gradient(to right, #f17442, #ff8c00);
+  transition: transform 0.25s ease-in-out;
+  cursor: pointer;
+}
+#app-container .tabs-container #clearAll-btn:hover {
+  background: linear-gradient(to right, #e2612e, #f78800);
+  transform: scale(1.02);
 }
 #app-container .task-list-container {
   display: flex;
@@ -73,7 +101,13 @@ body {
 #app-container .task-list-container .task-list .task-list__item .task-list__left {
   display: flex;
 }
+#app-container .task-list-container .task-list .task-list__item .task-list__left .checkbox {
+  accent-color: #f78800;
+}
 #app-container .task-list-container .task-list .task-list__item .task-list__left .task-list__text-output {
   text-decoration: line-through;
-  margin-left: 10px;
+  margin-left: 15px;
+}
+#app-container .task-list-container .task-list .task-list__item .task-list__right .dot-menu {
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */
