@@ -47,11 +47,12 @@ body {
   color: black;
   border: 0.8px solid lightgrey;
   border-radius: 6px;
-  transition: border 0.25s;
+  transition: border 0.25s, box-shadow 0.25s;
 }
 #app-container .app__form-container #new-task-form #new-task__input:focus {
   border: 0.8px solid #f78800;
   outline: 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 #app-container .tabs-container {
   margin: 20px 0px;
@@ -107,7 +108,16 @@ body {
 #app-container .task-list-container .task-list .task-list__item .task-list__left .task-list__text-output {
   text-decoration: line-through;
   margin-left: 15px;
+  cursor: pointer;
+  transition: color 0.25s;
+}
+#app-container .task-list-container .task-list .task-list__item .task-list__left .task-list__text-output:hover {
+  color: #f78800;
 }
 #app-container .task-list-container .task-list .task-list__item .task-list__right .dot-menu {
+  transition: color 0.25s;
   cursor: pointer;
+}
+#app-container .task-list-container .task-list .task-list__item .task-list__right .dot-menu:hover {
+  color: #f78800;
 }/*# sourceMappingURL=styles.css.map */
