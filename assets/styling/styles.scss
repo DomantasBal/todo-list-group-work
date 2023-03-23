@@ -5,17 +5,47 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
   background: linear-gradient(
     108.5deg,
     rgba(231, 69, 54, 0.82) 11.2%,
     rgba(255, 181, 17, 0.82) 68%
   );
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  font-family: Arial, Helvetica, sans-serif;
+
+  // NAVIGATION
+  header {
+    background: white;
+    width: 100%;
+
+    nav {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .nav__list {
+        margin: 0px 60px;
+        display: flex;
+        gap: 40px;
+        font-size: 1.2rem;
+
+        .nav__list-item {
+          list-style-type: none;
+          color: black;
+
+          .nav__list-link {
+            text-decoration: none;
+            color: black;
+          }
+        }
+      }
+    }
+  }
 
   hr {
     border-color: lightgrey;
@@ -25,147 +55,146 @@ body {
     margin-left: -30px;
     width: 400px;
   }
-}
 
-// MAIN APP CONTAINER STYLING
-#app-container {
-  width: 400px;
-  background: white;
-  margin: 150px 0px;
-  padding: 30px;
-  border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  align-self: stretch;
-}
-
-// MAIN APP CONTAINER
-#app-container {
-  // NEW TASK FORM
-  .app__form-container {
+  // MAIN APP CONTAINER STYLING
+  #app-container {
+    width: 400px;
+    background: white;
+    margin: 150px 0px;
+    padding: 30px;
+    border-radius: 6px;
     display: flex;
-    #new-task-form {
-      width: 100%;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  // MAIN APP CONTAINER
+  #app-container {
+    // NEW TASK FORM
+    .app__form-container {
       display: flex;
+      #new-task-form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        .new-task-form__icon {
+          font-size: 1rem;
+          position: absolute;
+          margin-left: 15px;
+          color: lightgray;
+        }
+
+        #new-task__input {
+          width: 100%;
+          padding: 15px;
+          padding-left: 40px;
+          font-size: 1rem;
+          color: black;
+          border: 0.8px solid lightgrey;
+          border-radius: 6px;
+          transition: border 0.25s, box-shadow 0.25s;
+        }
+        #new-task__input:focus {
+          border: 0.8px solid #f78800;
+          outline: 0;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+      }
+    }
+
+    // TABS SECTION
+    .tabs-container {
+      margin: 20px 0px;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
 
-      .new-task-form__icon {
-        font-size: 1rem;
-        position: absolute;
-        margin-left: 15px;
-        color: lightgray;
-      }
-
-      #new-task__input {
-        width: 100%;
-        padding: 15px;
-        padding-left: 40px;
-        font-size: 1rem;
-        color: black;
-        border: 0.8px solid lightgrey;
-        border-radius: 6px;
-        transition: border 0.25s, box-shadow 0.25s;
-      }
-      #new-task__input:focus {
-        border: 0.8px solid #f78800;
-        outline: 0;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-      }
-    }
-  }
-
-  // TABS SECTION
-  .tabs-container {
-    margin: 20px 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .tabs {
-      list-style-type: none;
-      display: flex;
-      gap: 15px;
-
-      .tab__item {
-        .tab__item-link {
-          text-decoration: none;
-          color: black;
-          transition: color 0.5s, font-size 0.25s;
-        }
-
-        .tab__item-link:hover {
-          color: #ff8c00;
-          font-size: 1.01rem;
-        }
-      }
-    }
-
-    #clearAll-btn {
-      padding: 8px 15px;
-      border: none;
-      border-radius: 4px;
-      color: white;
-      background: linear-gradient(to right, #f17442, #ff8c00);
-      transition: transform 0.25s ease-in-out;
-      cursor: pointer;
-    }
-    #clearAll-btn:hover {
-      background: linear-gradient(to right, #e2612e, #f78800);
-      transform: scale(1.02);
-    }
-  }
-
-  // TASK LIST SECTION
-  .task-list-container {
-    display: flex;
-    margin-top: 20px;
-
-    .task-list {
-      width: 100%;
-
-      .task-list__item {
+      .tabs {
         list-style-type: none;
         display: flex;
-        justify-content: space-between;
-        margin: 15px 0px;
+        gap: 15px;
 
-        .task-list__left {
-          .done-task-form {
-            display: flex;
+        .tab__item {
+          .tab__item-link {
+            text-decoration: none;
+            color: black;
+            transition: color 0.5s, font-size 0.25s;
+          }
 
-            .checkbox {
-              accent-color: #f78800;
-              // Not sure hot to change checkmark
+          .tab__item-link:hover {
+            color: #ff8c00;
+            font-size: 1.01rem;
+          }
+        }
+      }
+
+      #clearAll-btn {
+        padding: 8px 15px;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        background: linear-gradient(to right, #f17442, #ff8c00);
+        transition: transform 0.25s ease-in-out;
+        cursor: pointer;
+      }
+      #clearAll-btn:hover {
+        background: linear-gradient(to right, #e2612e, #f78800);
+        transform: scale(1.02);
+      }
+    }
+
+    // TASK LIST SECTION
+    .task-list-container {
+      display: flex;
+      margin-top: 20px;
+
+      .task-list {
+        width: 100%;
+
+        .task-list__item {
+          list-style-type: none;
+          display: flex;
+          justify-content: space-between;
+          margin: 15px 0px;
+
+          .task-list__left {
+            .done-task-form {
+              display: flex;
+
+              .checkbox {
+                accent-color: #f78800;
+                // Not sure hot to change checkmark
+              }
+
+              .task-list__text-output {
+                margin-left: 15px;
+                cursor: pointer;
+                transition: color 0.25s;
+              }
+              .task-list__text-output:hover {
+                color: #f78800;
+              }
             }
+          }
 
-            .task-list__text-output {
-              margin-left: 15px;
-              cursor: pointer;
+          .task-list__right {
+            .dot-menu {
               transition: color 0.25s;
+              cursor: pointer;
             }
-            .task-list__text-output:hover {
+            .dot-menu:hover {
               color: #f78800;
             }
           }
         }
-
-        .task-list__right {
-          .dot-menu {
-            transition: color 0.25s;
-            cursor: pointer;
-          }
-          .dot-menu:hover {
-            color: #f78800;
-          }
-        }
       }
     }
   }
-}
 
-/////////////// Helper Classes ///////////////
+  /////////////// Helper Classes ///////////////
 
-.crossOut {
-  text-decoration: line-through;
+  .crossOut {
+    text-decoration: line-through;
+  }
 }

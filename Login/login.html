@@ -1,23 +1,69 @@
-<link rel="stylesheet" href="login.css">
-<div class="login">
-    <form name='form-login'>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <!-- STYLING -->
+    <link rel="stylesheet" href="./login.css" />
+    <link rel="stylesheet" href="../assets/styling/styles.css" />
+    <script defer src="./login.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__list-item">
+            <a href="../index.html" class="nav__list-link">Home</a>
+          </li>
+          <li class="nav__list-item">
+            <span class="nav__register-icon">
+              <i class="fa-solid fa-user-plus"></i>
+            </span>
+            <a href="../Registration/registration.html" class="nav__list-link"
+              >Registration</a
+            >
+          </li>
+          <li class="nav__list-item">
+            <span class="nav__login-icon">
+              <i class="fa-solid fa-right-to-bracket"></i>
+            </span>
+            <a href="../Login/login.html" class="nav__list-link">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
+    <link rel="stylesheet" href="login.css" />
+    <div class="login">
+      <form name="form-login">
         <h1>SIGN IN</h1>
 
         <label for="userName">Email</label>
-        <input type="email" id="userName" placeholder="Username" required>
+        <input type="email" id="userName" placeholder="Username" required />
 
         <label for="userPw">Password</label>
-        <input type="password" id= "userPw" placeholder="Password" required>
+        <input type="password" id="userPw" placeholder="Password" required />
 
         <div id="remember">
-            <input type="checkbox" value="lsRememberMe" id="rememberMe"
-                   style="display: inline-block;">
-            <label>Remember me</label>
+          <input
+            type="checkbox"
+            value="lsRememberMe"
+            id="rememberMe"
+            style="display: inline-block"
+          />
+          <label>Remember me</label>
         </div>
 
-        <input id= "login_btn" type="submit" value="Login" onclick="check()">
+        <input id="login_btn" type="submit" value="Login" onclick="check()" />
         <script type="module" src="login.js"></script>
-
-    </form>
-</div>
+      </form>
+    </div>
+  </body>
+</html>
