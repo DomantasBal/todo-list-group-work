@@ -6,16 +6,24 @@
 
 body {
   background: linear-gradient(108.5deg, rgba(231, 69, 54, 0.82) 11.2%, rgba(255, 181, 17, 0.82) 68%);
-  background-repeat: no-repeat;
   height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
 }
+body hr {
+  border-color: lightgrey;
+  opacity: 0.1;
+  position: absolute;
+  top: 300px;
+  margin-left: -30px;
+  width: 400px;
+}
 
 #app-container {
   width: 400px;
-  height: 300px;
   background: white;
   margin: 150px 0px;
   padding: 30px;
@@ -23,6 +31,7 @@ body {
   display: flex;
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  align-self: stretch;
 }
 
 #app-container .app__form-container {
@@ -98,6 +107,7 @@ body {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
+  margin: 15px 0px;
 }
 #app-container .task-list-container .task-list .task-list__item .task-list__left {
   display: flex;
