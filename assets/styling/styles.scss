@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(
+    108.5deg,
+    rgba(231, 69, 54, 0.82) 11.2%,
+    rgba(255, 181, 17, 0.82) 68%
+  );
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+// MAIN APP CONTAINER STYLING
+#app-container {
+  width: 400px;
+  height: 300px;
+  background: white;
+  margin: 150px 0px;
+  padding: 30px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+// MAIN APP CONTAINER
+#app-container {
+  // NEW TASK FORM
+  .app__form-container {
+    display: flex;
+    #new-task-form {
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      .new-task-form__icon {
+        font-size: 1rem;
+        position: absolute;
+        margin-left: 15px;
+        color: lightgray;
+      }
+
+      #new-task__input {
+        width: 100%;
+        padding: 15px;
+        padding-left: 40px;
+        font-size: 1rem;
+        color: black;
+        border: 0.8px solid lightgrey;
+        border-radius: 6px;
+        transition: border 0.25s;
+      }
+      #new-task__input:focus {
+        border: 0.8px solid #f78800;
+        outline: 0;
+      }
+    }
+  }
+
+  // TABS SECTION
+  .tabs-container {
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .tabs {
+      list-style-type: none;
+      display: flex;
+      gap: 15px;
+
+      .tab__item {
+        .tab__item-link {
+          text-decoration: none;
+          color: black;
+          transition: color 0.5s, font-size 0.25s;
+        }
+
+        .tab__item-link:hover {
+          color: #ff8c00;
+          font-size: 1.01rem;
+        }
+      }
+    }
+
+    #clearAll-btn {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      background: linear-gradient(to right, #f17442, #ff8c00);
+      transition: transform 0.25s ease-in-out;
+      cursor: pointer;
+    }
+    #clearAll-btn:hover {
+      background: linear-gradient(to right, #e2612e, #f78800);
+      transform: scale(1.02);
+    }
+  }
+
+  // TASK LIST SECTION
+  .task-list-container {
+    display: flex;
+    margin-top: 20px;
+    // background: red;
+
+    .task-list {
+      width: 100%;
+
+      .task-list__item {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+
+        .task-list__left {
+          display: flex;
+
+          .checkbox {
+            accent-color: #f78800;
+            // Not sure hot to change checkmark
+          }
+
+          .task-list__text-output {
+            text-decoration: line-through;
+            margin-left: 15px;
+          }
+        }
+
+        .task-list__right {
+          .dot-menu {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
