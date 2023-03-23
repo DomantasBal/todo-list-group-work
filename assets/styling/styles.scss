@@ -131,21 +131,22 @@ body {
         margin: 15px 0px;
 
         .task-list__left {
-          display: flex;
+          .done-task-form {
+            display: flex;
 
-          .checkbox {
-            accent-color: #f78800;
-            // Not sure hot to change checkmark
-          }
+            .checkbox {
+              accent-color: #f78800;
+              // Not sure hot to change checkmark
+            }
 
-          .task-list__text-output {
-            text-decoration: line-through;
-            margin-left: 15px;
-            cursor: pointer;
-            transition: color 0.25s;
-          }
-          .task-list__text-output:hover {
-            color: #f78800;
+            .task-list__text-output {
+              margin-left: 15px;
+              cursor: pointer;
+              transition: color 0.25s;
+            }
+            .task-list__text-output:hover {
+              color: #f78800;
+            }
           }
         }
 
@@ -161,4 +162,10 @@ body {
       }
     }
   }
+}
+
+/////////////// Helper Classes ///////////////
+
+.crossOut {
+  text-decoration: line-through;
 }
