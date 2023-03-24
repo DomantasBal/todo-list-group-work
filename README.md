@@ -20,7 +20,7 @@ Task: Build a To-Do List Application with User Authentication and Edit Functiona
 
 • Write unit tests for the task addition, deletion, and editing functions (Irmina)
 
-• Add a feature for marking tasks as favorites, only available when logged in (Irmina)
+• Add a feature for marking tasks as favorites, only available when logged in (Irmina) (Domantas)
 
 • Test the favorite functionality and fix any bugs or issues (Irmina)
 
