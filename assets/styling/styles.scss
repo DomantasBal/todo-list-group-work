@@ -105,7 +105,7 @@ body {
 
     // TABS SECTION
     .tabs-container {
-      margin: 20px 0px;
+      margin: 40px 0px 10px 0px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -122,9 +122,14 @@ body {
             transition: color 0.5s, font-size 0.25s;
           }
 
-          .tab__item-link:hover {
+          .tabs__fav-icon {
+            cursor: pointer;
+            transition: color 0.5s;
+          }
+
+          .tab__item-link:hover,
+          .tabs__fav-icon:hover {
             color: #ff8c00;
-            font-size: 1.01rem;
           }
         }
       }
@@ -147,7 +152,7 @@ body {
     // TASK LIST SECTION
     .task-list-container {
       display: flex;
-      margin-top: 20px;
+      margin-top: 10px;
 
       .task-list {
         width: 100%;
