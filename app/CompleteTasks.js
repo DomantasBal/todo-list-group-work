@@ -16,6 +16,10 @@ const textOutputs = document.querySelectorAll(".task-list__text-output");
 //   });
 // }
 
+// STILL HAVE BUG WITH CROSSING OUT ELEMENTS WHEN DONE
+// WHEN CLICKED ON UL CONTAINER IR CROSSES OUT ALL ELEMENTS AT ONCE
+// WHEN CLICKED ON 3DOT MENU IT CROSSES OUT 3DOT MENU
+
 checkboxes.forEach((checkbox, index) => {
   checkbox.addEventListener("click", () => {
     checkbox.checked
