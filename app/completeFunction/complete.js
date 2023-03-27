@@ -1,8 +1,6 @@
 // • Develop a function for checking off completed tasks
-const taskList = document.querySelector(".task-list");
-const checkboxes = document.querySelectorAll(".checkbox");
-const textOutputs = document.querySelectorAll(".task-list__text-output");
 
+// CROSS OUT FUNCTIONALITY ON ELEMENT CLICK
 function markDone(selectedItem) {
   let taskName = selectedItem.parentElement.lastElementChild;
 
@@ -16,5 +14,3 @@ function markDone(selectedItem) {
       : taskName.classList.remove("crossOut");
   }
 }
-
-// // LINE THROUGH FUNCTIONALITY
