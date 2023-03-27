@@ -8,7 +8,7 @@ Task: Build a To-Do List Application with User Authentication and Edit Functiona
 
 <!-- • Design the layout of the application and create wireframes (All) -- Done-->
 
-<!-- • Write the HTML and CSS for the main page that displays tasks (Domantas) -- Done (needs comments) -->
+<!-- • Write the HTML and CSS for the main page that displays tasks (Domantas) -- Done -->
 
 • Implement user authentication and registration functionality using JavaScript and localStorage (Aurimas)
 

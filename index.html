@@ -14,7 +14,7 @@
     />
 
     <!-- Javascript -->
-    <script defer src="./app/CompleteTasks.js"></script>
+    <script defer src="./app/completeFunction/complete.js"></script>
 
     <title>Document</title>
   </head>
@@ -92,38 +92,21 @@
           <li class="task-list__item">
             <div class="task-list__left">
               <form action="" class="done-task-form">
-                <input type="checkbox" checked="checked" class="checkbox" />
-                <p class="task-list__text-output">Eat Pizza</p>
+                <input
+                  type="checkbox"
+                  class="checkbox"
+                  onclick="markDone(this)"
+                />
+                <p class="task-list__text-output" onclick="markDone(this)">
+                  Eat Pizza
+                </p>
               </form>
             </div>
             <div class="task-list__right">
-              <i class="dot-menu fa-solid fa-ellipsis"></i>
-            </div>
-          </li>
-          <!-- SINGLE LIST ITEM END -->
-          <!-- SINGLE LIST ITEM -->
-          <li class="task-list__item">
-            <div class="task-list__left">
-              <form action="" class="done-task-form">
-                <input type="checkbox" checked="checked" class="checkbox" />
-                <p class="task-list__text-output">Eat Pizza2</p>
-              </form>
-            </div>
-            <div class="task-list__right">
-              <i class="dot-menu fa-solid fa-ellipsis"></i>
-            </div>
-          </li>
-          <!-- SINGLE LIST ITEM END -->
-          <!-- SINGLE LIST ITEM -->
-          <li class="task-list__item">
-            <div class="task-list__left">
-              <form action="" class="done-task-form">
-                <input type="checkbox" checked="checked" class="checkbox" />
-                <p class="task-list__text-output">Eat Pizza3</p>
-              </form>
-            </div>
-            <div class="task-list__right">
-              <i class="dot-menu fa-solid fa-ellipsis"></i>
+              <i
+                class="dot-menu fa-solid fa-ellipsis"
+                onclick="showEditMenu()"
+              ></i>
             </div>
           </li>
           <!-- SINGLE LIST ITEM END -->
