@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="./assets/styling/styles.css" />
 
     <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
 
     <!-- Javascript -->
     <script defer src="./app/completeFunction/complete.js"></script>
@@ -27,7 +30,9 @@
             <span class="nav__register-icon">
               <i class="fa-solid fa-user-plus"></i>
             </span>
-            <a href="./Registration/registration.html" class="nav__list-link">Registration</a>
+            <a href="./Registration/registration.html" class="nav__list-link"
+              >Registration</a
+            >
           </li>
           <li class="nav__list-item">
             <span class="nav__login-icon">
@@ -45,7 +50,12 @@
         <form action="" id="new-task-form">
           <i class="new-task-form__icon fa-solid fa-pen-to-square"></i>
           <!-- NEW TASK INPUT -->
-          <input type="text" name="" id="new-task__input" placeholder="Add a New Task + Enter" />
+          <input
+            type="text"
+            name=""
+            id="new-task__input"
+            placeholder="Add a New Task + Enter"
+          />
         </form>
       </div>
 
@@ -62,7 +72,9 @@
             <a href="" class="tab__item-link">Completed</a>
           </li>
           <li class="tab__item">
-            <a href="" class="tab__item-link"><i class="tabs__fav-icon fa-regular fa-heart"></i></a>
+            <a href="" class="tab__item-link"
+              ><i class="tabs__fav-icon fa-regular fa-heart"></i
+            ></a>
           </li>
         </ul>
 
@@ -80,12 +92,25 @@
           <li class="task-list__item">
             <div class="task-list__left">
               <form action="" class="done-task-form">
-                <input type="checkbox" class="checkbox" onclick="markDone(this)" />
-                <p class="task-list__text-output" onclick="markDone(this)">Eat Pizza</p>
+                <input
+                  type="checkbox"
+                  class="checkbox"
+                  onclick="markDone(this)"
+                />
+                <p class="task-list__text-output" onclick="markDone(this)">
+                  Eat Pizza
+                </p>
               </form>
             </div>
             <div class="task-list__right">
-
+              <span class="task-menu">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <i class="fa-solid fa-trash"></i>
+              </span>
+              <i
+                class="dot-menu fa-solid fa-ellipsis"
+                onclick="showEditMenu()"
+              ></i>
             </div>
           </li>
           <!-- SINGLE LIST ITEM END -->
