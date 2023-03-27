@@ -156,6 +156,22 @@ body #app-container .task-list-container .task-list .task-list__item .task-list_
 body #app-container .task-list-container .task-list .task-list__item .task-list__right .dot-menu:hover {
   color: #f78800;
 }
+body #app-container .task-list-container .task-list .task-list__item .task-list__right .task-menu {
+  width: 40px;
+  height: 10px;
+  margin: 2px;
+  transition: opacity 0.5s ease-in-out;
+}
+body #app-container .task-list-container .task-list .task-list__item .task-list__right .task-menu i {
+  transition: color 0.5s;
+}
+body #app-container .task-list-container .task-list .task-list__item .task-list__right .task-menu i:hover {
+  color: #f78800;
+  cursor: pointer;
+}
 body .crossOut {
   text-decoration: line-through;
+}
+body .hide {
+  opacity: 0;
 }/*# sourceMappingURL=styles.css.map */
