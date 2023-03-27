@@ -86,7 +86,7 @@ body #app-container .app__form-container #new-task-form #new-task__input:focus {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 body #app-container .tabs-container {
-  margin: 20px 0px;
+  margin: 40px 0px 10px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -101,9 +101,13 @@ body #app-container .tabs-container .tabs .tab__item .tab__item-link {
   color: black;
   transition: color 0.5s, font-size 0.25s;
 }
-body #app-container .tabs-container .tabs .tab__item .tab__item-link:hover {
+body #app-container .tabs-container .tabs .tab__item .tabs__fav-icon {
+  cursor: pointer;
+  transition: color 0.5s;
+}
+body #app-container .tabs-container .tabs .tab__item .tab__item-link:hover,
+body #app-container .tabs-container .tabs .tab__item .tabs__fav-icon:hover {
   color: #ff8c00;
-  font-size: 1.01rem;
 }
 body #app-container .tabs-container #clearAll-btn {
   padding: 8px 15px;
@@ -120,7 +124,7 @@ body #app-container .tabs-container #clearAll-btn:hover {
 }
 body #app-container .task-list-container {
   display: flex;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 body #app-container .task-list-container .task-list {
   width: 100%;
