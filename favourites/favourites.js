@@ -1,4 +1,5 @@
 let todos = JSON.parse(localStorage.getItem("todo-list"));
+let loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
 
 // Check if user is logged in
 
@@ -10,6 +11,10 @@ const userLogin = () => {
 
 // Add to-do task to favourites
 const addToFavourites2 = (id) => {
-  todos[id].favourite = true;
-  localStorage.setItem("todo-list", JSON.stringify(todos));
+  if (loggedUser.length > 0) {
+    todos[id].favourite = true;
+    localStorage.setItem("todo-list", JSON.stringify(todos));
+  } else {
+    alert("You need to log in!");
+  }
 };
