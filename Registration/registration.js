@@ -6,22 +6,23 @@ function store() {
   var numbers = /[0-9]/g;
 
   if (name.value.length == 0) {
-    alert("Please fill in email");
+    alert("Please fill in email!");
   } else if (pw.value.length == 0) {
-    alert("Please fill in password");
+    alert("Please fill in password!");
   } else if (name.value.length == 0 && pw.value.length == 0) {
-    alert("Please fill in email and password");
-  } else if (pw.value.length > 8) {
-    alert("Max of 8");
+    alert("Please fill in email and password!");
+  } else if (pw.value.length < 8) {
+    alert("Atleast 8 symbols!");
   } else if (!pw.value.match(numbers)) {
-    alert("please add 1 number");
+    alert("please add 1 number!");
   } else if (!pw.value.match(upperCaseLetters)) {
-    alert("please add 1 uppercase letter");
+    alert("please add 1 uppercase letter!");
   } else if (!pw.value.match(lowerCaseLetters)) {
-    alert("please add 1 lovercase letter");
+    alert("please add 1 lovercase letter!");
   } else {
     localStorage.setItem("name", name.value);
     localStorage.setItem("pw", pw.value);
-    alert("Your account has been created");
+    location.href = "../Login/login.html";
+    alert("Your account has been created! :)");
   }
 }
