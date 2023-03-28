@@ -1,17 +1,36 @@
+console.log(todos);
 function editTask(task) {
   const listItem = task.closest(".task-list__item");
-  const taskNameElement = listItem.querySelector(".task-list__text-output");
+  const taskText = listItem.querySelector(".task-list__text-output");
 
   // INLINE EDIT ENABLE
-  taskNameElement.setAttribute("contenteditable", true);
+  taskText.setAttribute("contenteditable", true);
 
-  // FINISH EDIT - STORE EDIT TO VARIABLE
-  taskNameElement.addEventListener("blur", function () {
-    const editedTaskName = taskNameElement.textContent.trim();
-    taskNameElement.setAttribute("contenteditable", false);
-    taskNameElement.textContent = editedTaskName;
+  // EDIT BOX STYLES
+  taskText.style.border = "1px solid #EF785E";
+  taskText.style.padding = "15px 30px 15px 0px";
+  taskText.style.maxWidth = "200px";
+  taskText.style.whiteSpace = "break-word";
+  taskText.style.borderRadius = "6px";
 
-    // Do something with the edited task name (such as saving it to a database)
-    console.log(`Edited task name: ${editedTaskName}`);
+  // FINISH EDIT - STORE EDIT TO VARIABLE ON OUTSIDE CLICK
+  taskText.addEventListener("blur", function () {
+    const editedTaskName = taskText.textContent.trim();
+    taskText.setAttribute("contenteditable", false);
+    taskText.textContent = editedTaskName;
+
+    // REMOVE EDIT BOX STYLES
+    taskText.style.border = "";
+    taskText.style.padding = "";
+
+    let taskId = task.getAttribute("id");
+
+    // VALUES
+    editLocalStorage(editedTaskName, taskId);
   });
+}
+
+function editLocalStorage(textToSave, taskId) {
+  console.log(textToSave);
+  console.log(taskId);
 }
