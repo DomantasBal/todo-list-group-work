@@ -164,7 +164,8 @@ body #app-container .task-list-container .task-list .task-list__item .task-list_
   transition: opacity 1s;
 }
 body #app-container .task-list-container .task-list .task-list__item .task-list__right .task-menu .edit-icon:hover,
-body #app-container .task-list-container .task-list .task-list__item .task-list__right .task-menu .delete-icon:hover {
+body #app-container .task-list-container .task-list .task-list__item .task-list__right .task-menu .delete-icon:hover,
+body #app-container .task-list-container .task-list .task-list__item .task-list__right .task-menu .favorite-icon:hover {
   color: #f78800;
   cursor: pointer;
   transition: opacity 0.5s, color 0.5s;

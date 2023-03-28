@@ -5,7 +5,10 @@ let loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
 
 const userLogin = () => {
   const users = JSON.parse(localStorage.getItem("user"));
-  const loggedUser = users.filter((user) => user.username === username.value && user.password === password.value);
+  const loggedUser = users.filter(
+    (user) =>
+      user.username === username.value && user.password === password.value
+  );
   localStorage.setItem("loggedUser", JSON.stringify(loggedUser));
 };
 
