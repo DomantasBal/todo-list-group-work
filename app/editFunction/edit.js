@@ -1,4 +1,3 @@
-console.log(todos);
 function editTask(task) {
   const listItem = task.closest(".task-list__item");
   const taskText = listItem.querySelector(".task-list__text-output");
