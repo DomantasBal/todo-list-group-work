@@ -145,6 +145,8 @@ body #app-container .task-list-container .task-list .task-list__item .task-list_
   margin-left: 15px;
   cursor: pointer;
   transition: color 0.25s;
+  display: inline-block;
+  width: 100%;
 }
 body #app-container .task-list-container .task-list .task-list__item .task-list__left .done-task-form .task-list__text-output:hover {
   color: #f78800;

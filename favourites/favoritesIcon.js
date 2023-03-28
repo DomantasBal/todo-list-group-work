@@ -2,7 +2,6 @@ let counterFavIcon = 0;
 function facIconChange(icon) {
   counterFavIcon++;
   counterFavIcon % 2 == 1 ? iconFilled(icon) : iconEmpty(icon);
-  console.log(counterFavIcon);
 }
 
 function iconFilled(icon) {
