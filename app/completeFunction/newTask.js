@@ -1,6 +1,7 @@
 const newTaskInput = document.querySelector("#new-task__input");
 let todos = JSON.parse(localStorage.getItem("todo-list"));
 let tasksContainer = document.querySelector(".task-list");
+// let idCounter;
 
 // Enter event:
 newTaskInput.addEventListener("keypress", (e) => {
@@ -19,6 +20,7 @@ const saveTasks = () => {
   if (!localStorage["todo-list"]) todoList = [];
   else todoList = JSON.parse(localStorage["todo-list"]);
   if (!(todoList instanceof Array)) todoList = [];
+  task.id = todoList.length;
   todoList.push(task);
   localStorage.setItem("todo-list", JSON.stringify(todoList));
 };
@@ -26,7 +28,7 @@ const saveTasks = () => {
 // Function for displaying task
 const taskTemplate = (todo) => {
   return `
-  <li class="task-list__item">
+  <li class="task-list__item" id=${todo.id}>
             <div class="task-list__left">
               <form action="" class="done-task-form">
                 <input type="checkbox" class="checkbox" onclick="markDone(this)" />
@@ -37,7 +39,7 @@ const taskTemplate = (todo) => {
               <span class="task-menu show">
                 <i class="fa-solid fa-pen-to-square edit-icon" onclick="editTask(this)"></i>
                 <i class="fa-solid fa-trash delete-icon"></i>
-                <i class="fa-regular fa-heart favorite-icon" onclick="facIconChange(this)"></i>
+                <i class="fa-regular fa-heart favorite-icon" onclick="facIconChange(this); addToFavourites(${todo.id})"></i>
               </span>
                 <i class="dot-menu fa-solid fa-ellipsis" onclick="showEditMenu(this)"></i>
             </div>
@@ -50,3 +52,13 @@ window.onload = (e) => {
     tasksContainer.innerHTML += taskTemplate(task);
   });
 };
+
+// Function to add task to favourites
+
+const addToFavourites = (id) => {
+  console.log(id);
+  todos[id].favourite = true;
+  localStorage.setItem("todo-list", JSON.stringify(todos));
+};
+
+// localStorage.clear();
