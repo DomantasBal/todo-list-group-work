@@ -8,7 +8,7 @@ function editTask(task) {
 
   // EDIT BOX STYLES
   taskText.style.border = "1px solid #EF785E";
-  taskText.style.padding = "15px 30px 15px 0px";
+  taskText.style.padding = "15px 30px 15px 5px";
   taskText.style.maxWidth = "200px";
   taskText.style.whiteSpace = "break-word";
   taskText.style.borderRadius = "6px";
@@ -25,12 +25,15 @@ function editTask(task) {
 
     let taskId = task.getAttribute("id");
 
-    // VALUES
+    // EDIT VALUES SEND TO LOCALSTORAGE
     editLocalStorage(editedTaskName, taskId);
   });
 }
 
 function editLocalStorage(textToSave, taskId) {
+  // COLLECTED VALUE GOES TO LOCALSTORAGE HERE
   console.log(textToSave);
+
+  //  EDITED TASK ID TO MATCH LOCALSTORAGE EDITED ITEM ID
   console.log(taskId);
 }
