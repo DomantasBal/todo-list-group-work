@@ -7,6 +7,7 @@ newTaskInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     e.preventDefault();
     saveTasks();
+    location.reload();
   }
 });
 
