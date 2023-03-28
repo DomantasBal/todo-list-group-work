@@ -9,10 +9,6 @@ p {
   line-height: 1.5em;
 }
 
-h1 {
-  margin-bottom: 10px;
-}
-
 after {
   clear: both;
 }
@@ -20,11 +16,6 @@ after {
 .login {
   margin: 50px auto;
   width: 320px;
-}
-
-li {
-  margin: 2px;
-  margin-left: 15px;
 }
 
 .login form {

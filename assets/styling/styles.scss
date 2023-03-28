@@ -191,19 +191,31 @@ body {
             .dot-menu:hover {
               color: #f78800;
             }
+
+            // DELETE EDIT MENU ICONS CONTAINER
             .task-menu {
               width: 40px;
               height: 10px;
               margin: 2px;
-              transition: opacity 0.5s ease-in-out;
+              opacity: 0;
+              transition: opacity 1s;
 
-              i {
-                transition: color 0.5s;
+              .edit-icon:hover,
+              .delete-icon:hover {
+                color: #f78800;
+                cursor: pointer;
+                transition: opacity 0.5s, color 0.5s;
               }
             }
-            .task-menu i:hover {
-              color: #f78800;
+
+            .close-icon {
+              transition: 0.5s;
+              color: rgb(255, 128, 0);
               cursor: pointer;
+            }
+            .close-icon:hover {
+              transition: opacity 0.25s, color 0.5s;
+              color: red;
             }
           }
         }
@@ -217,7 +229,5 @@ body {
     text-decoration: line-through;
   }
 
-  .hide {
-    opacity: 0;
-  }
+  // -- BODY END -- //
 }

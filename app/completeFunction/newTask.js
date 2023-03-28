@@ -33,7 +33,11 @@ const taskTemplate = (todo) => {
               </form>
             </div>
             <div class="task-list__right">
-              <i class="dot-menu fa-solid fa-ellipsis" onclick="showEditMenu()"></i>
+              <span class="task-menu show">
+                <i class="fa-solid fa-pen-to-square edit-icon"></i>
+                <i class="fa-solid fa-trash delete-icon"></i>
+              </span>
+                <i class="dot-menu fa-solid fa-ellipsis" onclick="showEditMenu(this)"></i>
             </div>
           </li>`;
 };
