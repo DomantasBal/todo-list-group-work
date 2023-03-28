@@ -34,7 +34,7 @@ const taskTemplate = (todo) => {
             </div>
             <div class="task-list__right">
               <span class="task-menu show">
-                <i class="fa-solid fa-pen-to-square edit-icon"></i>
+                <i class="fa-solid fa-pen-to-square edit-icon" onclick="editTask(this)"></i>
                 <i class="fa-solid fa-trash delete-icon"></i>
                 <i class="fa-regular fa-heart favorite-icon" onclick="facIconChange(this)"></i>
               </span>
