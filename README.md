@@ -12,7 +12,7 @@ Task: Build a To-Do List Application with User Authentication and Edit Functiona
 
 • Implement user authentication and registration functionality using JavaScript and localStorage (Aurimas)
 
-• Develop a function for checking off completed tasks (Domantas)
+<!-- • Develop a function for checking off completed tasks (Domantas) -- Done -->
 
 • Write a function for deleting completed tasks (Aurimas)
 
