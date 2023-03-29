@@ -1,38 +1,41 @@
-function editTask(task) {
-  const listItem = task.closest(".task-list__item");
-  const taskText = listItem.querySelector(".task-list__text-output");
+// function editTask(id) {
+//   newTaskInput.focus();
 
-  // INLINE EDIT ENABLE
-  taskText.setAttribute("contenteditable", true);
+//   newTaskInput.addEventListener("keyup", () => {
+//     let userTask = newTaskInput.value.trim();
+//     let todoList = JSON.parse(localStorage.getItem("todo-list"));
+//     todoList[id].taskName = userTask;
+//     localStorage.setItem("todo-list", JSON.stringify(todoList));
+//   });
+// }
 
-  // EDIT BOX STYLES
-  taskText.style.border = "1px solid #EF785E";
-  taskText.style.padding = "15px 30px 15px 5px";
-  taskText.style.maxWidth = "200px";
-  taskText.style.whiteSpace = "break-word";
-  taskText.style.borderRadius = "6px";
+let isEditTask = false;
 
-  // FINISH EDIT - STORE EDIT TO VARIABLE ON OUTSIDE CLICK
-  taskText.addEventListener("blur", function () {
-    const editedTaskName = taskText.textContent.trim();
-    taskText.setAttribute("contenteditable", false);
-    taskText.textContent = editedTaskName;
-
-    // REMOVE EDIT BOX STYLES
-    taskText.style.border = "";
-    taskText.style.padding = "";
-
-    let taskId = task.getAttribute("id");
-
-    // EDIT VALUES SEND TO LOCALSTORAGE
-    editLocalStorage(editedTaskName, taskId);
-  });
+function editTask(taskId, textName) {
+  editId = taskId;
+  isEditTask = true;
+  newTaskInput.value = textName;
+  newTaskInput.focus();
+  newTaskInput.classList.add("active");
 }
 
-function editLocalStorage(textToSave, taskId) {
-  // COLLECTED VALUE GOES TO LOCALSTORAGE HERE
-  console.log(textToSave);
-
-  //  EDITED TASK ID TO MATCH LOCALSTORAGE EDITED ITEM ID
-  console.log(taskId);
-}
+newTaskInput.addEventListener("keyup", (e) => {
+  let userTask = newTaskInput.value.trim();
+  if (e.key == "Enter" && userTask) {
+    if (!isEditTask) {
+      let task = { taskName: userTask, favourite: false };
+      if (!localStorage.getItem("todo-list")) {
+        todos = [];
+      } else {
+        todos = JSON.parse(localStorage.getItem("todo-list"));
+      }
+      task.id = todos.length;
+    } else {
+      isEditTask = false;
+      todos[editId].taskName = userTask;
+    }
+    newTaskInput.value = "";
+    localStorage.setItem("todo-list", JSON.stringify(todos));
+    location.reload();
+  }
+});

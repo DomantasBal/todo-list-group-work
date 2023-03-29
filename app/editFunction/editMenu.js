@@ -16,7 +16,6 @@ function openEditMenu(selected) {
   xMark.setAttribute("onclick", "showEditMenu(this)");
 
   selected.replaceWith(xMark);
-  console.log("ON");
 }
 
 // CLOSES EDIT MENU - HIDES EDIT ELEMENTS
@@ -31,5 +30,4 @@ function closeEditMenu(selected) {
   dotMenu.setAttribute("onclick", "showEditMenu(this)");
 
   selected.replaceWith(dotMenu);
-  console.log("OFF");
 }
