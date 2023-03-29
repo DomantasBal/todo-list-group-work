@@ -3,8 +3,6 @@ let todos = JSON.parse(localStorage.getItem("todo-list"));
 let tasksContainer = document.querySelector(".task-list");
 // let idCounter;
 
-console.log(tasksContainer.children[1]);
-
 // Enter event:
 newTaskInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
@@ -39,7 +37,8 @@ const taskTemplate = (todo) => {
             </div>
             <div class="task-list__right">
               <span class="task-menu show">
-                <i class="fa-solid fa-pen-to-square edit-icon" onclick="editTask(this)"></i>
+                <i class="fa-solid fa-pen-to-square edit-icon" onclick='editTask(${todo.id}, "${todo.taskName}")'></i>
+
                 <i class="fa-solid fa-trash delete-icon"></i>
                 <i class="fa-regular fa-heart favorite-icon" onclick="facIconChange(this); addToFavourites(${todo.id})"></i>
               </span>
