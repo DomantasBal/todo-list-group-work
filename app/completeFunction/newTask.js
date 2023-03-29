@@ -3,6 +3,8 @@ let todos = JSON.parse(localStorage.getItem("todo-list"));
 let tasksContainer = document.querySelector(".task-list");
 // let idCounter;
 
+console.log(tasksContainer.children[1]);
+
 // Enter event:
 newTaskInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
@@ -16,7 +18,7 @@ newTaskInput.addEventListener("keypress", (e) => {
 const saveTasks = () => {
   let todoList;
   let task = { taskName: newTaskInput.value, favourite: false };
-  console.log(task);
+  // console.log(task);
   if (!localStorage["todo-list"]) todoList = [];
   else todoList = JSON.parse(localStorage["todo-list"]);
   if (!(todoList instanceof Array)) todoList = [];
