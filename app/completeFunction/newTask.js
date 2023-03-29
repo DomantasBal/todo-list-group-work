@@ -16,7 +16,7 @@ newTaskInput.addEventListener("keypress", (e) => {
 const saveTasks = () => {
   let todoList;
   let task = { taskName: newTaskInput.value, favourite: false };
-  console.log(task);
+  // console.log(task);
   if (!localStorage["todo-list"]) todoList = [];
   else todoList = JSON.parse(localStorage["todo-list"]);
   if (!(todoList instanceof Array)) todoList = [];
@@ -37,8 +37,8 @@ const taskTemplate = (todo) => {
             </div>
             <div class="task-list__right">
               <span class="task-menu show">
-                <i class="fa-solid fa-pen-to-square edit-icon" onclick="editTask(this)"></i>
-                <i class="fa-solid fa-trash delete-icon" onclick="deleteTask(this)"></i>
+                <i class="fa-solid fa-pen-to-square edit-icon" onclick='editTask(${todo.id}, "${todo.taskName}")'></i>
+                <i class="fa-solid fa-trash delete-icon"></i>
                 <i class="fa-regular fa-heart favorite-icon" onclick="facIconChange(this); addToFavourites(${todo.id})"></i>
               </span>
                 <i class="dot-menu fa-solid fa-ellipsis" onclick="showEditMenu(this)"></i>
