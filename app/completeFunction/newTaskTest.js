@@ -1,5 +1,6 @@
 const newTaskInput = document.querySelector("#new-task__input");
 let todos = JSON.parse(localStorage.getItem("todo-list"));
+let loggedUser2 = JSON.parse(localStorage.getItem("loggedUser"));
 let tasksContainer = document.querySelector(".task-list");
 
 // Enter event:
@@ -81,14 +82,18 @@ window.onload = (e) => {
 
 const addToFavourites = (icon, id) => {
   console.log();
-  if (todos[id].favourite === true) {
-    todos[id].favourite = false;
-    facIconChange(icon, id);
+  if (loggedUser2 && loggedUser2.length > 0) {
+    if (todos[id].favourite === true) {
+      todos[id].favourite = false;
+      facIconChange(icon, id);
+    } else {
+      todos[id].favourite = true;
+      facIconChange(icon, id);
+    }
+    localStorage.setItem("todo-list", JSON.stringify(todos));
   } else {
-    todos[id].favourite = true;
-    facIconChange(icon, id);
+    alert("You need to log in!");
   }
-  localStorage.setItem("todo-list", JSON.stringify(todos));
 };
 
 function facIconChange(icon, id) {
