@@ -15,7 +15,6 @@ clearAll.addEventListener("click", () => {
 // let taskId = task.getAttribute("id");
 
 function deleteTask(taskId) {
-  isEditTask = false;
   list.splice(taskId, 1);
   localStorage.setItem("todo-list", JSON.stringify(list));
   location.reload();
