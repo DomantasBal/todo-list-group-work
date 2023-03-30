@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(135deg, #f5af19, #f12711);
+  background: linear-gradient(108.5deg, rgba(231, 69, 54, 0.82) 11.2%, rgba(255, 181, 17, 0.82) 68%);
   color: white;
   font: 87.5%/1.5em 'Open Sans', sans-serif;
   margin: 0;
@@ -72,4 +72,17 @@ after { clear: both; }
 }
 #login form input[type="submit"]:hover {
   background: #16aa56;
+}
+
+.todo {
+  position: relative;
+  text-align: center;
+  color: rgb(140, 11, 11);
+  margin: 50px;
+  font-size: 3em;
+}
+
+img {
+  width: 500px;
+  height: auto;
 }
