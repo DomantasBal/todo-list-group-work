@@ -6,10 +6,7 @@ const favouriteTasks = document.querySelector("#favourite-tasks");
 
 const userLogin = () => {
   const users = JSON.parse(localStorage.getItem("user"));
-  const loggedUser = users.filter(
-    (user) =>
-      user.username === username.value && user.password === password.value
-  );
+  const loggedUser = users.filter((user) => user.username === username.value && user.password === password.value);
   localStorage.setItem("loggedUser", JSON.stringify(loggedUser));
 };
 
@@ -28,7 +25,7 @@ const userLogin = () => {
 //Task template. Can we reuse it from newTask.js?
 const taskTemplate2 = (todo) => {
   return `
-  <li class="task-list__item">
+  <li class="task-list__item" id=${todo.id}>
             <div class="task-list__left">
               <form action="" class="done-task-form">
                 <input type="checkbox" class="checkbox" onclick="markDone(this)" />
@@ -37,12 +34,13 @@ const taskTemplate2 = (todo) => {
             </div>
             <div class="task-list__right">
               <span class="task-menu show">
-                <i class="fa-solid fa-pen-to-square edit-icon"></i>
-                <i class="fa-solid fa-trash delete-icon"></i>
+                <i class="fa-solid fa-pen-to-square edit-icon" onclick="editTask(this)"></i>
+                <i class="fa-solid fa-trash delete-icon" onclick='deleteTask(${todo.id}, "${todo.taskName}")'></i>
+                <i class="fa-solid fa-heart favorite-icon" onclick="addToFavourites(this, ${todo.id}); console.log(this)"></i>
               </span>
                 <i class="dot-menu fa-solid fa-ellipsis" onclick="showEditMenu(this)"></i>
-            </div>
-          </li>`;
+            </div>          
+  </li>`;
 };
 
 //Display favourites
