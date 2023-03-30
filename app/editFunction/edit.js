@@ -1,14 +1,17 @@
-const localUsername = localStorage.getItem("name");
-const localPass = localStorage.getItem("pw");
+const isLoggedIn = JSON.parse(localStorage.getItem("loggedUser"));
+console.log(isLoggedIn);
 
 let isEditTask = false;
-
 function editTask(taskId, textName) {
-  editId = taskId;
-  isEditTask = true;
-  newTaskInput.value = textName;
-  newTaskInput.focus();
-  newTaskInput.classList.add("active");
+  if (!isLoggedIn === null) {
+    editId = taskId;
+    isEditTask = true;
+    newTaskInput.value = textName;
+    newTaskInput.focus();
+    newTaskInput.classList.add("active");
+  } else {
+    alert("Sorry you need to login to edit tasks");
+  }
 }
 
 newTaskInput.addEventListener("keyup", (e) => {
