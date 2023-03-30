@@ -16,7 +16,7 @@ Task: Build a To-Do List Application with User Authentication and Edit Functiona
 
 • Write a function for deleting completed tasks (Aurimas)
 
-• Develop a feature for editing tasks in place, only available when logged in (Domantas)
+<!-- • Develop a feature for editing tasks in place, only available when logged in (Domantas) -- Done -->
 
 • Write unit tests for the task addition, deletion, and editing functions (Irmina)
 
