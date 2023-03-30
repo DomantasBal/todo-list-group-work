@@ -1,13 +1,5 @@
-// function editTask(id) {
-//   newTaskInput.focus();
-
-//   newTaskInput.addEventListener("keyup", () => {
-//     let userTask = newTaskInput.value.trim();
-//     let todoList = JSON.parse(localStorage.getItem("todo-list"));
-//     todoList[id].taskName = userTask;
-//     localStorage.setItem("todo-list", JSON.stringify(todoList));
-//   });
-// }
+const localUsername = localStorage.getItem("name");
+const localPass = localStorage.getItem("pw");
 
 let isEditTask = false;
 
