@@ -1,8 +1,9 @@
 body {
   background: linear-gradient(108.5deg, rgba(231, 69, 54, 0.82) 11.2%, rgba(255, 181, 17, 0.82) 68%);
   color: white;
-  font: 87.5%/1.5em 'Open Sans', sans-serif;
+  font: 87.5%/1.5em;
   margin: 0;
+  font-family: "Delicious Handrawn";
 }
 
 p {
@@ -85,4 +86,36 @@ after { clear: both; }
 img {
   width: 500px;
   height: auto;
+}
+
+.registerLogin{
+  width: 400px;
+  height: 150px;
+  text-align: center;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+.register, .login {
+  margin: 30px;
+  padding: 5px;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  color: rgb(140, 11, 11);
+  border: 3px solid rgb(140, 11, 11);
+  border-radius: 10px;
+}
+
+.register:hover, .login:hover{
+  cursor: pointer;
+  text-shadow: 2px 2px rgb(140, 11, 11);
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: 10px;
 }
