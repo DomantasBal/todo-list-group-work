@@ -134,3 +134,5 @@ function facIconChange(icon, id) {
 //     return "favourite-icon fa-solid fa-heart favorite-icon";
 //   }
 // }
+
+module.exports = saveTasks;
