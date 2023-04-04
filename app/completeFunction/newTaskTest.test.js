@@ -1,6 +1,7 @@
-const saveTasks = require("./newTaskTest");
+import { saveTasks } from "./newTaskTest";
 
 test("creates new task and saves it to localstorage", () => {
-  const newTaskInput.value = "Eat pizaa";
-  const 
+  const newTask = "Eat pizza";
+  const createNewTask = saveTasks(newTask);
+  expect(createNewTask).toEqual([{ taskName: newTask, favourite: false, id: 0 }]);
 });

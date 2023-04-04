@@ -2,20 +2,21 @@ const newTaskInput = document.querySelector("#new-task__input");
 let todos = JSON.parse(localStorage.getItem("todo-list"));
 let loggedUser2 = JSON.parse(localStorage.getItem("loggedUser"));
 let tasksContainer = document.querySelector(".task-list");
+// let newTask = newTaskInput.value;
 
 // Enter event:
-newTaskInput.addEventListener("keypress", (e) => {
+newTaskInput?.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     e.preventDefault();
-    saveTasks();
+    saveTasks(newTaskInput.value);
     location.reload();
   }
 });
 
 // Function for adding tasks to localStorage todo list
-const saveTasks = () => {
+export const saveTasks = (newTask) => {
   let todoList;
-  let task = { taskName: newTaskInput.value, favourite: false };
+  let task = { taskName: newTask, favourite: false };
   console.log(task);
   if (!localStorage["todo-list"]) todoList = [];
   else todoList = JSON.parse(localStorage["todo-list"]);
@@ -23,6 +24,7 @@ const saveTasks = () => {
   task.id = todoList.length;
   todoList.push(task);
   localStorage.setItem("todo-list", JSON.stringify(todoList));
+  return todoList;
 };
 
 // Function for displaying task if not favourite
@@ -134,5 +136,3 @@ function facIconChange(icon, id) {
 //     return "favourite-icon fa-solid fa-heart favorite-icon";
 //   }
 // }
-
-module.exports = saveTasks;
