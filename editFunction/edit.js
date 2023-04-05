@@ -1,21 +1,22 @@
+const newTaskInput2 = document.querySelector("#new-task__input");
 const isLoggedIn = JSON.parse(localStorage.getItem("loggedUser"));
 console.log(isLoggedIn);
 
 let isEditTask = false;
 function editTask(taskId, textName) {
-  if (!isLoggedIn === null) {
+  if (isLoggedIn) {
     editId = taskId;
     isEditTask = true;
-    newTaskInput.value = textName;
-    newTaskInput.focus();
-    newTaskInput.classList.add("active");
+    newTaskInput2.value = textName;
+    newTaskInput2.focus();
+    newTaskInput2.classList.add("active");
   } else {
     alert("Sorry you need to login to edit tasks");
   }
 }
 
-newTaskInput.addEventListener("keyup", (e) => {
-  let userTask = newTaskInput.value.trim();
+newTaskInput2.addEventListener("keyup", (e) => {
+  let userTask = newTaskInput2.value.trim();
   if (e.key == "Enter" && userTask) {
     if (!isEditTask) {
       let task = { taskName: userTask, favourite: false };
@@ -29,7 +30,7 @@ newTaskInput.addEventListener("keyup", (e) => {
       isEditTask = false;
       todos[editId].taskName = userTask;
     }
-    newTaskInput.value = "";
+    newTaskInput2.value = "";
     localStorage.setItem("todo-list", JSON.stringify(todos));
     location.reload();
   }

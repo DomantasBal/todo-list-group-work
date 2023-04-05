@@ -1,7 +1,7 @@
 {
   "name": "todo-list-group-work",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "newTaskTest.js",
   "repository": "https://github.com/DomantasBal/todo-list-group-work.git",
   "author": "irminaj <irminaj@github.com>",
   "license": "MIT",
