@@ -1,3 +1,5 @@
+console.log(newTaskInput);
+
 const isLoggedIn = JSON.parse(localStorage.getItem("loggedUser"));
 console.log(isLoggedIn);
 

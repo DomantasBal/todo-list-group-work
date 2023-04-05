@@ -6,7 +6,10 @@ const favouriteTasks = document.querySelector("#favourite-tasks");
 
 const userLogin = () => {
   const users = JSON.parse(localStorage.getItem("user"));
-  const loggedUser = users.filter((user) => user.username === username.value && user.password === password.value);
+  const loggedUser = users.filter(
+    (user) =>
+      user.username === username.value && user.password === password.value
+  );
   localStorage.setItem("loggedUser", JSON.stringify(loggedUser));
 };
 
