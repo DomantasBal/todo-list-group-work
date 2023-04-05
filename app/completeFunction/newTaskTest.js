@@ -1,8 +1,15 @@
+import { showEditMenu } from "../editFunction/editMenu";
+import { editTask } from "../editFunction/edit";
+import { addToFavourites } from "../addToFavourites/addTofavourites";
+globalThis.showEditMenu = showEditMenu;
+globalThis.editTask = editTask;
+globalThis.addToFavourites = addToFavourites;
+
 const newTaskInput = document.querySelector("#new-task__input");
 let todos = JSON.parse(localStorage.getItem("todo-list"));
 let loggedUser2 = JSON.parse(localStorage.getItem("loggedUser"));
 let tasksContainer = document.querySelector(".task-list");
-// let newTask = newTaskInput.value;
+let editMenu = document.querySelector(".edit-menu");
 
 // Enter event:
 newTaskInput?.addEventListener("keypress", (e) => {
@@ -64,7 +71,7 @@ const taskTemplateFavourite = (todo) => {
                 <i class="fa-solid fa-trash delete-icon"></i>
                 <i class="fa-solid fa-heart favorite-icon" onclick="addToFavourites(this, ${todo.id}); console.log(this)"></i>
               </span>
-                <i class="dot-menu fa-solid fa-ellipsis" onclick="showEditMenu(this)"></i>
+                <i class="dot-menu fa-solid fa-ellipsis" onclick="showEditMenu(this)></i>
             </div>          
   </li>`;
 };
@@ -82,57 +89,29 @@ window.onload = (e) => {
 
 // Function to add task to favourites
 
-const addToFavourites = (icon, id) => {
-  console.log();
-  if (loggedUser2 && loggedUser2.length > 0) {
-    if (todos[id].favourite === true) {
-      todos[id].favourite = false;
-      facIconChange(icon, id);
-    } else {
-      todos[id].favourite = true;
-      facIconChange(icon, id);
-    }
-    localStorage.setItem("todo-list", JSON.stringify(todos));
-  } else {
-    alert("You need to log in!");
-  }
-};
+// export const addToFavourites = (icon, id) => {
+//   console.log();
+//   if (loggedUser2 && loggedUser2.length > 0) {
+//     if (todos[id].favourite === true) {
+//       todos[id].favourite = false;
+//       facIconChange(icon, id);
+//     } else {
+//       todos[id].favourite = true;
+//       facIconChange(icon, id);
+//     }
+//     localStorage.setItem("todo-list", JSON.stringify(todos));
+//   } else {
+//     alert("You need to log in!");
+//   }
+// };
 
-function facIconChange(icon, id) {
-  console.log(id);
-  if (todos[id].favourite === false) {
-    icon.classList.remove("fa-solid", "fa-heart", "favorite-icon");
-    icon.classList.add("fa-regular", "fa-heart", "favorite-icon");
-  } else {
-    icon.classList.remove("fa-regular", "fa-heart", "favorite-icon");
-    icon.classList.add("fa-solid", "fa-heart", "favorite-icon");
-  }
-}
-
-// function iconFilled(icon) {
-//   icon.classList.add("fa-solid", "fa-heart", "favorite-icon");
-// }
-
-// function iconEmpty(icon) {
-//   favEd.classList.add("fa-regular", "fa-heart", "favorite-icon");
-//   favEd.setAttribute("onclick", "facIconChange(this)");
-// }
-
-// function iconFilled(icon) {
-//   // let favEd = document.querySelector(".favourite-icon");
-//   icon.className = "favourite-icon fa-solid fa-heart favorite-icon";
-// }
-
-// function iconEmpty(icon) {
-//   // let favEd = icon;
-//   icon.className = "favourite-icon fa-regular fa-heart favorite-icon";
-// }
-
-// function facIconChange2(id) {
+// function facIconChange(icon, id) {
 //   console.log(id);
 //   if (todos[id].favourite === false) {
-//     return "favourite-icon fa-regular fa-heart favorite-icon";
+//     icon.classList.remove("fa-solid", "fa-heart", "favorite-icon");
+//     icon.classList.add("fa-regular", "fa-heart", "favorite-icon");
 //   } else {
-//     return "favourite-icon fa-solid fa-heart favorite-icon";
+//     icon.classList.remove("fa-regular", "fa-heart", "favorite-icon");
+//     icon.classList.add("fa-solid", "fa-heart", "favorite-icon");
 //   }
 // }

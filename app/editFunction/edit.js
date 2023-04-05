@@ -1,12 +1,14 @@
+const newTaskInput = document.querySelector("#new-task__input");
 console.log(newTaskInput);
 
 const isLoggedIn = JSON.parse(localStorage.getItem("loggedUser"));
 console.log(isLoggedIn);
 
 let isEditTask = false;
-function editTask(taskId, textName) {
-  if (!isLoggedIn === null) {
+export function editTask(taskId, textName) {
+  if (isLoggedIn) {
     editId = taskId;
+    console.log(editId);
     isEditTask = true;
     newTaskInput.value = textName;
     newTaskInput.focus();
