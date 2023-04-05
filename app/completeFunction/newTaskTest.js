@@ -1,9 +1,11 @@
 import { showEditMenu } from "../editFunction/editMenu";
 import { editTask } from "../editFunction/edit";
 import { addToFavourites } from "../addToFavourites/addTofavourites";
+import { deleteTask } from "../../deleteFunction/delete";
 globalThis.showEditMenu = showEditMenu;
 globalThis.editTask = editTask;
 globalThis.addToFavourites = addToFavourites;
+globalThis.deleteTask = deleteTask;
 
 const newTaskInput = document.querySelector("#new-task__input");
 let todos = JSON.parse(localStorage.getItem("todo-list"));
