@@ -11,7 +11,6 @@ const newTaskInput = document.querySelector("#new-task__input");
 let todos = JSON.parse(localStorage.getItem("todo-list"));
 let loggedUser2 = JSON.parse(localStorage.getItem("loggedUser"));
 let tasksContainer = document.querySelector(".task-list");
-let editMenu = document.querySelector(".edit-menu");
 
 // Enter event:
 newTaskInput?.addEventListener("keypress", (e) => {
@@ -48,7 +47,7 @@ const taskTemplate = (todo) => {
             </div>
             <div class="task-list__right">
               <span class="task-menu show">
-                <i class="fa-solid fa-pen-to-square edit-icon" onclick="editTask(this)"></i>
+                <i class="fa-solid fa-pen-to-square edit-icon" onclick="editTask(this, ${todo.taskName})")></i>
                 <i class="fa-solid fa-trash delete-icon" onclick='deleteTask(${todo.id}, "${todo.taskName}")'></i>
                 <i class="fa-regular fa-heart favorite-icon" onclick="addToFavourites(this, ${todo.id}); console.log(this)"></i>
               </span>
@@ -73,7 +72,7 @@ const taskTemplateFavourite = (todo) => {
                 <i class="fa-solid fa-trash delete-icon"></i>
                 <i class="fa-solid fa-heart favorite-icon" onclick="addToFavourites(this, ${todo.id}); console.log(this)"></i>
               </span>
-                <i class="dot-menu fa-solid fa-ellipsis" onclick="showEditMenu(this)></i>
+                <i class="dot-menu fa-solid fa-ellipsis" onclick="showEditMenu(this)"></i>
             </div>          
   </li>`;
 };

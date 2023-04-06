@@ -1,4 +1,5 @@
 let loggedUser2 = JSON.parse(localStorage.getItem("loggedUser"));
+let todos = JSON.parse(localStorage.getItem("todo-list"));
 
 export const addToFavourites = (icon, id) => {
   console.log();
