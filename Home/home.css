@@ -51,13 +51,13 @@ p {
   border-radius: 6px;
   margin: 20px;
   color: white;
-  background: none;
+  background-color: unset;
   border: solid 1px linear-gradient(to right, #f17442, #ff8c00);
-  transition: transform 0.25s ease-in-out, background 1s ease-in-out;
+  transition: background 0.5s ease-in-out;
   cursor: pointer;
   text-decoration: none;
 }
 .btn:hover {
-  background: linear-gradient(to right, #e2612e, #f78800);
+  background: #e2612e;
   transform: scale(1.02);
 }
