@@ -32,7 +32,6 @@ const taskTemplate = (todo) => {
   <li class="task-list__item" id=${todo.id}>
             <div class="task-list__left">
               <form action="" class="done-task-form">
-                <input type="checkbox" class="checkbox" onclick="markDone(this)" />
                 <p class="task-list__text-output" onclick="markDone(this)">${todo.taskName}</p>
               </form>
             </div>
@@ -53,7 +52,6 @@ const taskTemplateFavourite = (todo) => {
   <li class="task-list__item" id=${todo.id}>
             <div class="task-list__left">
               <form action="" class="done-task-form">
-                <input type="checkbox" class="checkbox" onclick="markDone(this)" />
                 <p class="task-list__text-output" onclick="markDone(this)">${todo.taskName}</p>
               </form>
             </div>

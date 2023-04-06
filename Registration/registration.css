@@ -20,7 +20,7 @@ after {
 
 .login form {
   margin: auto;
-  margin-top: 100px;
+  margin-top: 400px;
   padding: 22px 22px 22px 22px;
   width: 100%;
   border-radius: 5px;
@@ -48,7 +48,7 @@ after {
   color: #a9a9a9;
   margin-bottom: 1em;
   padding: 0 16px;
-  width: 100%;
+  width: 90%;
   height: 50px;
 }
 
@@ -58,7 +58,7 @@ after {
   color: #a9a9a9;
   margin-bottom: 1em;
   padding: 0 16px;
-  width: 100%;
+  width: 90%;
   height: 50px;
 }
 
@@ -76,22 +76,3 @@ after {
 #login form input[type=submit]:hover {
   background: #16aa56;
 }/*# sourceMappingURL=registration.css.map */
-
-h1 {
-  margin-bottom: 10px;
-}
-
-li {
-  margin-left: 20px;
-}
-
-#rgstr_btn {
-  margin-top: 10px;
-  font-size: 1.1em;
-  font-style: italic;
-}
-
-#rgstr_btn:hover {
-  background:rgba(62, 102, 17, 0.6);
-  border: 2px solid rgba(62, 102, 17, 0.6);
-}
