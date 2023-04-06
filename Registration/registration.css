@@ -20,7 +20,7 @@ after {
 
 .login form {
   margin: auto;
-  margin-top: 400px;
+  margin-top: 100px;
   padding: 22px 22px 22px 22px;
   width: 100%;
   border-radius: 5px;
@@ -76,3 +76,22 @@ after {
 #login form input[type=submit]:hover {
   background: #16aa56;
 }/*# sourceMappingURL=registration.css.map */
+
+
+h1 {
+  margin-bottom: 10px;
+}
+#rgstr_btn {
+  margin-top: 10px;
+  font-size: 1.1em;
+  font-style: italic;
+}
+
+#rgstr_btn:hover {
+  background:rgba(62, 102, 17, 0.6);
+  border: 2px solid rgba(62, 102, 17, 0.6);
+}
+
+li {	
+  margin-left: 20px;	
+}	
