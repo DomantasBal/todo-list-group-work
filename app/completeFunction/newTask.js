@@ -32,7 +32,9 @@ const taskTemplate = (todo) => {
   <li class="task-list__item" id=${todo.id}>
             <div class="task-list__left">
               <form action="" class="done-task-form">
+
                 <p class="task-list__text-output" onclick="markDone(this, ${todo.id})">${todo.taskName}</p>
+
               </form>
             </div>
             <div class="task-list__right">
@@ -52,7 +54,9 @@ const taskTemplateFavourite = (todo) => {
   <li class="task-list__item" id=${todo.id}>
             <div class="task-list__left">
               <form action="" class="done-task-form">
+
                 <p class="task-list__text-output task-name" onclick="markDone(this, ${todo.id})">${todo.taskName}</p>
+                
               </form>
             </div>
             <div class="task-list__right">
