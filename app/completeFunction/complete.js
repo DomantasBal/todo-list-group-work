@@ -21,6 +21,11 @@ const displayCompleted = () => {
   tasksContainer.innerHTML = "";
   completedTasksArr.forEach((task) => {
     tasksContainer.innerHTML += taskTemplate(task);
+    if (task.completed === false) {
+      document.getElementById(`task.${task.id}`).style = "text-decoration:none";
+    } else {
+      document.getElementById(`task.${task.id}`).style = "text-decoration:line-through";
+    }
   });
 };
 
