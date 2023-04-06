@@ -224,6 +224,20 @@ body {
     }
   }
 
+  // EDIT BOX ON CLICK STYLE
+  .edit-task__input {
+    padding: 2px;
+    font-size: 1rem;
+    color: black;
+    transition: border 0.25s, box-shadow 0.25s;
+  }
+
+  .edit-task__input:focus {
+    border: solid 1px rgb(255, 128, 0);
+    border-radius: 4px;
+    outline: 0;
+  }
+
   /////////////// Helper Classes ///////////////
 
   .crossOut {
