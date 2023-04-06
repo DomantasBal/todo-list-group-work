@@ -1,12 +1,3 @@
-import { showEditMenu } from "../editFunction/editMenu";
-import { editTask } from "../editFunction/edit";
-import { addToFavourites } from "../addToFavourites/addTofavourites";
-import { deleteTask } from "../../deleteFunction/delete";
-globalThis.showEditMenu = showEditMenu;
-globalThis.editTask = editTask;
-globalThis.addToFavourites = addToFavourites;
-globalThis.deleteTask = deleteTask;
-
 const newTaskInput = document.querySelector("#new-task__input");
 let todos = JSON.parse(localStorage.getItem("todo-list"));
 let loggedUser2 = JSON.parse(localStorage.getItem("loggedUser"));
@@ -22,7 +13,7 @@ newTaskInput?.addEventListener("keypress", (e) => {
 });
 
 // Function for adding tasks to localStorage todo list
-export const saveTasks = (newTask) => {
+const saveTasks = (newTask) => {
   let todoList;
   let task = { taskName: newTask, favourite: false };
   console.log(task);
@@ -47,7 +38,7 @@ const taskTemplate = (todo) => {
             </div>
             <div class="task-list__right">
               <span class="task-menu show">
-                <i class="fa-solid fa-pen-to-square edit-icon" onclick="editTask(this, ${todo.taskName})")></i>
+                <i class="fa-solid fa-pen-to-square edit-icon" onclick="editTask(this)")></i>
                 <i class="fa-solid fa-trash delete-icon" onclick='deleteTask(${todo.id}, "${todo.taskName}")'></i>
                 <i class="fa-regular fa-heart favorite-icon" onclick="addToFavourites(this, ${todo.id}); console.log(this)"></i>
               </span>
@@ -69,7 +60,7 @@ const taskTemplateFavourite = (todo) => {
             <div class="task-list__right">
               <span class="task-menu show">
                 <i class="fa-solid fa-pen-to-square edit-icon" onclick="editTask(this)"></i>
-                <i class="fa-solid fa-trash delete-icon"></i>
+                <i class="fa-solid fa-trash delete-icon" onclick='deleteTask(${todo.id}, "${todo.taskName}")'></i>
                 <i class="fa-solid fa-heart favorite-icon" onclick="addToFavourites(this, ${todo.id}); console.log(this)"></i>
               </span>
                 <i class="dot-menu fa-solid fa-ellipsis" onclick="showEditMenu(this)"></i>
@@ -90,29 +81,29 @@ window.onload = (e) => {
 
 // Function to add task to favourites
 
-// export const addToFavourites = (icon, id) => {
-//   console.log();
-//   if (loggedUser2 && loggedUser2.length > 0) {
-//     if (todos[id].favourite === true) {
-//       todos[id].favourite = false;
-//       facIconChange(icon, id);
-//     } else {
-//       todos[id].favourite = true;
-//       facIconChange(icon, id);
-//     }
-//     localStorage.setItem("todo-list", JSON.stringify(todos));
-//   } else {
-//     alert("You need to log in!");
-//   }
-// };
+const addToFavourites = (icon, id) => {
+  console.log();
+  if (loggedUser2 && loggedUser2.length > 0) {
+    if (todos[id].favourite === true) {
+      todos[id].favourite = false;
+      facIconChange(icon, id);
+    } else {
+      todos[id].favourite = true;
+      facIconChange(icon, id);
+    }
+    localStorage.setItem("todo-list", JSON.stringify(todos));
+  } else {
+    alert("You need to log in!");
+  }
+};
 
-// function facIconChange(icon, id) {
-//   console.log(id);
-//   if (todos[id].favourite === false) {
-//     icon.classList.remove("fa-solid", "fa-heart", "favorite-icon");
-//     icon.classList.add("fa-regular", "fa-heart", "favorite-icon");
-//   } else {
-//     icon.classList.remove("fa-regular", "fa-heart", "favorite-icon");
-//     icon.classList.add("fa-solid", "fa-heart", "favorite-icon");
-//   }
-// }
+function facIconChange(icon, id) {
+  console.log(id);
+  if (todos[id].favourite === false) {
+    icon.classList.remove("fa-solid", "fa-heart", "favorite-icon");
+    icon.classList.add("fa-regular", "fa-heart", "favorite-icon");
+  } else {
+    icon.classList.remove("fa-regular", "fa-heart", "favorite-icon");
+    icon.classList.add("fa-solid", "fa-heart", "favorite-icon");
+  }
+}
