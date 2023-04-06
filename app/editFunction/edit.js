@@ -1,11 +1,7 @@
-const newTaskInput = document.querySelector("#new-task__input");
-console.log(newTaskInput);
-
 const isLoggedIn = JSON.parse(localStorage.getItem("loggedUser"));
-console.log(isLoggedIn);
 
 let isEditTask = false;
-export function editTask(taskId, textName) {
+function editTask(taskId, textName) {
   if (isLoggedIn) {
     editId = taskId;
     console.log(editId);

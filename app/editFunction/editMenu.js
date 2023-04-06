@@ -1,5 +1,5 @@
 let counter = 0;
-export function showEditMenu(selected) {
+function showEditMenu(selected) {
   counter++;
   counter % 2 == 1 ? openEditMenu(selected) : closeEditMenu(selected);
 }
