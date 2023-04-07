@@ -33,7 +33,7 @@ const taskTemplate = (todo) => {
             <div class="task-list__left">
               <form action="" class="done-task-form">
 
-                <p class="task-list__text-output" onclick="markDone(this, ${todo.id})">${todo.taskName}</p>
+                <p class="task-list__text-output task-name" id=task.${todo.id}  onclick="markDone(this, ${todo.id})">${todo.taskName}</p>
 
               </form>
             </div>
@@ -54,9 +54,7 @@ const taskTemplateFavourite = (todo) => {
   <li class="task-list__item" id=${todo.id}>
             <div class="task-list__left">
               <form action="" class="done-task-form">
-
-                <p class="task-list__text-output task-name" onclick="markDone(this, ${todo.id})">${todo.taskName}</p>
-                
+                <p class="task-list__text-output" id=task.${todo.id} onclick="markDone(this, ${todo.id})"">${todo.taskName}</p>
               </form>
             </div>
             <div class="task-list__right">
@@ -75,8 +73,18 @@ window.onload = (e) => {
   todos.forEach((task) => {
     if (task.favourite === false) {
       tasksContainer.innerHTML += taskTemplate(task);
+      if (task.completed === false) {
+        document.getElementById(`task.${task.id}`).style = "text-decoration:none";
+      } else {
+        document.getElementById(`task.${task.id}`).style = "text-decoration:line-through";
+      }
     } else {
       tasksContainer.innerHTML += taskTemplateFavourite(task);
+      if (task.completed === false) {
+        document.getElementById(`task.${task.id}`).style = "text-decoration:none";
+      } else {
+        document.getElementById(`task.${task.id}`).style = "text-decoration:line-through";
+      }
     }
   });
 };
