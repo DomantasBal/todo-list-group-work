@@ -20,8 +20,12 @@ const saveTasks = (newTask) => {
   if (!localStorage["todo-list"]) todoList = [];
   else todoList = JSON.parse(localStorage["todo-list"]);
   if (!(todoList instanceof Array)) todoList = [];
-  task.id = todoList.length;
+  // task.id = todoList.length;
   todoList.push(task);
+  todoList.forEach((item, index) => {
+    item.id = index - 1 + 1;
+    return item.id;
+  });
   localStorage.setItem("todo-list", JSON.stringify(todoList));
   return todoList;
 };
