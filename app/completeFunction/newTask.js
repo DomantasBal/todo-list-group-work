@@ -78,16 +78,20 @@ window.onload = (e) => {
     if (task.favourite === false) {
       tasksContainer.innerHTML += taskTemplate(task);
       if (task.completed === false) {
-        document.getElementById(`task.${task.id}`).style = "text-decoration:none";
+        document.getElementById(`task.${task.id}`).style =
+          "text-decoration:none";
       } else {
-        document.getElementById(`task.${task.id}`).style = "text-decoration:line-through";
+        document.getElementById(`task.${task.id}`).style =
+          "text-decoration:line-through";
       }
     } else {
       tasksContainer.innerHTML += taskTemplateFavourite(task);
       if (task.completed === false) {
-        document.getElementById(`task.${task.id}`).style = "text-decoration:none";
+        document.getElementById(`task.${task.id}`).style =
+          "text-decoration:none";
       } else {
-        document.getElementById(`task.${task.id}`).style = "text-decoration:line-through";
+        document.getElementById(`task.${task.id}`).style =
+          "text-decoration:line-through";
       }
     }
   });
@@ -107,7 +111,7 @@ const addToFavourites = (icon, id) => {
     }
     localStorage.setItem("todo-list", JSON.stringify(todos));
   } else {
-    alert("You need to log in!");
+    showAlert();
   }
 };
 
