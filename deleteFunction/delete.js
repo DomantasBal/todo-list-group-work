@@ -14,6 +14,10 @@ clearAll.addEventListener("click", () => {
 
 function deleteTask(taskId) {
   list.splice(taskId, 1);
+  list.forEach((item, index) => {
+    item.id = index - 1 + 1;
+    return item.id;
+  });
   localStorage.setItem("todo-list", JSON.stringify(list));
   location.reload();
 }
