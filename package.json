@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "newTaskTest.js",
   "repository": "https://github.com/DomantasBal/todo-list-group-work.git",
-  "author": "irminaj <irminaj@github.com>",
+  "author": [
+    "DomantasBal <domantasbal@github.com>",
+    "irminaj <irminaj@github.com>",
+    "https://github.com/AurimasT"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@babel/preset-env": "^7.21.4",
