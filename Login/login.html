@@ -12,13 +12,27 @@
     <!-- STYLING -->
     <link rel="stylesheet" href="./login.css" />
     <link rel="stylesheet" href="../assets/styling/styles.css" />
+    <link rel="stylesheet" href="../assets/styling/navigation.scss" />
     <script defer src="./login.js"></script>
     <title>Login</title>
   </head>
   <body>
-    <header>
+    <!-- <header>
       <nav class="nav">
         <ul class="nav__list">
+         
+        </ul>
+      </nav>
+    </header> -->
+
+    <header>
+      <section class="top-nav">
+        <div>Team 3</div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-button-container" for="menu-toggle">
+          <div class="menu-button"></div>
+        </label>
+        <ul class="menu">
           <li class="nav__list-item">
             <a href="../Home/home.html" class="nav__list-link">Home</a>
           </li>
@@ -26,7 +40,7 @@
           <li class="nav__list-item">
             <a href="../index.html" class="nav__list-link">Todo List</a>
           </li>
-          
+
           <li class="nav__list-item">
             <span class="nav__register-icon">
               <i class="fa-solid fa-user-plus"></i>
@@ -42,7 +56,8 @@
             <a href="../Login/login.html" class="nav__list-link">Login</a>
           </li>
         </ul>
-      </nav>
+      </section>
+      <!-- NAV END -->
     </header>
 
     <div class="login">

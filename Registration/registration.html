@@ -13,6 +13,7 @@
     <!-- STYLING -->
     <link rel="stylesheet" href="./registration.css" />
     <link rel="stylesheet" href="../assets/styling/styles.css" />
+    <link rel="stylesheet" href="../assets/styling/navigation.scss" />
 
     <!-- Javascript -->
     <script defer src="./registration.js"></script>
@@ -21,9 +22,13 @@
   </head>
   <body>
     <header>
-      <nav class="nav">
-        <ul class="nav__list">
-          
+      <section class="top-nav">
+        <div>Team 3</div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-button-container" for="menu-toggle">
+          <div class="menu-button"></div>
+        </label>
+        <ul class="menu">
           <li class="nav__list-item">
             <a href="../Home/home.html" class="nav__list-link">Home</a>
           </li>
@@ -47,7 +52,7 @@
             <a href="../Login/login.html" class="nav__list-link">Login</a>
           </li>
         </ul>
-      </nav>
+      </section>
     </header>
 
     <div class="login">

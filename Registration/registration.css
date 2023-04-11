@@ -48,7 +48,7 @@ after {
   color: #a9a9a9;
   margin-bottom: 1em;
   padding: 0 16px;
-  width: 90%;
+  width: 100%;
   height: 50px;
 }
 
@@ -58,12 +58,13 @@ after {
   color: #a9a9a9;
   margin-bottom: 1em;
   padding: 0 16px;
-  width: 90%;
+  width: 100%;
   height: 50px;
 }
 
 .login form input[type=submit] {
   background: rgba(139, 195, 74, 0.6);
+  margin: 10px 0px;
   border: 0;
   width: 100%;
   height: 40px;

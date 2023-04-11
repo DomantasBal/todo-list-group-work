@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- STYLES -->
     <link rel="stylesheet" href="./assets/styling/styles.css" />
     <link rel="stylesheet" href="./assets/styling/alertBox.css" />
+    <link rel="stylesheet" href="./assets/styling/navigation.scss" />
 
     <!-- FONT AWESOME -->
     <link
@@ -14,22 +16,20 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     />
 
-    <!-- Javascript -->
-
-    <!-- NEW TASK FUNC. -->
-    <!-- <script defer src="./app/completeFunction/newTask.js"></script> -->
-
     <title>Todo List</title>
   </head>
   <body>
-    <!-- DIFFERENT NAVBAR COLOR -->
     <header>
-      <nav class="nav">
-        <ul class="nav__list">
+      <section class="top-nav">
+        <div>Team 3</div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-button-container" for="menu-toggle">
+          <div class="menu-button"></div>
+        </label>
+        <ul class="menu">
           <li class="nav__list-item">
             <a href="./Home/home.html" class="nav__list-link">Home</a>
           </li>
-
           <li class="nav__list-item">
             <a href="./index.html" class="nav__list-link">Todo List</a>
           </li>
@@ -49,7 +49,7 @@
             <a href="./Login/login.html" class="nav__list-link">Login</a>
           </li>
         </ul>
-      </nav>
+      </section>
     </header>
     <!-- APP WRAPPER -->
     <div id="app-container">
